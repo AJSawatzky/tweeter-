@@ -22,6 +22,7 @@
   
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -33,7 +34,8 @@
     <nav>
       <span>tweeter</span>
       <div class='nav-right'><p><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down"></i>
+        <button class="new-tweet-button"></button><i class="fa-solid fa-angles-down"></i>
+      </button>
       </div>
     </nav>
     <header id="user-header">
@@ -50,41 +52,16 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST" id="tweetform">
+        <form id="tweetform">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>          
           <div class="form-footer">
-            <button type="submit" class="button">Tweet</button>
+            <button id="new-tweet-button" type="submit" class="button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <section id="tweet">
-        <article class="tweet-container">
-          <header>
-            <div class="tweet-profile">
-            <img src="images/profile-hex.png" class="profile-img">
-            <p class="user-name">Newton</p>
-            </div>
-            <div class="alias">
-                @SirIsaac
-            </div>
-          </header>
-          <div class="text">
-            If I have seen further it was by standing on the shoulders of giants.
-          </div>
-          <footer>
-            <div class="tweet-date">
-            10 days ago
-            </div>
-            <div class="tweet-icons">
-              <button><i class="fa-regular fa-flag"></i></button>
-              <button><i class="fa-solid fa-retweet"></i></button> 
-              <button class="likes"><i class="fa-solid fa-heart"></i><div class="like-count">1</div></button> 
-            
-            </div>
-          </footer>
-        </article>
+      <section> id="tweet-container">        
     </section>
     </main>
   </body>

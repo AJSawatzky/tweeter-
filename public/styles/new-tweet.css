@@ -31,3 +31,17 @@
 .counter {
   font-family: 'Bungee', sans-serif;
 }
+
+.errorbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  height: 50px;
+  height: 100%; 
+}
+
+.new-tweet{
+  display: none;
+}
