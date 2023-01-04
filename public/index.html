@@ -12,6 +12,13 @@
     
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -33,12 +40,15 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div class='nav-right'><p><strong>Write</strong> a new tweet</p>
-        <button class="new-tweet-button"></button><i class="fa-solid fa-angles-down"></i>
-      </button>
+      <div class='nav-right'>
+        <span><strong>Write</strong> a new tweet</span>
+        <div class="nav-arrow"> a new tweet>
+        <i class="fa-solid fa-angles-down"></i>
+        </div>
       </div>
     </nav>
-    <header id="user-header">
+
+    <header class="page-header">
       <div>
         <img scr="/images/profile-hex.png"class="profile">
       </div>
@@ -51,13 +61,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="tweetform">
+        <form class="/tweets" method="POST" id="submit-tweet">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>          
-          <div class="form-footer">
-            <button id="new-tweet-button" type="submit" class="button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" id="tweet-counter" class="counter" for="tweet-text"> 140</output>
           </div>
         </form>
       </section>

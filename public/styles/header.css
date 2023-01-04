@@ -1,13 +1,12 @@
-#user-header {
-  width:100%;
+.page-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(../images/bg.png);
-  background-color: #76C0DD;
+  height: 640;
+  background: rgba(0, 27, 32, 0.602);
+  color: #FFFFFF;
+  width: 100%;
+  background-image: url(public/images/dust.png);
 }
 
-.profile {
-  margin-top: 130px;
-};

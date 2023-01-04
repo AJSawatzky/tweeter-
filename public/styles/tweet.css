@@ -1,80 +1,86 @@
-.tweet {
-  display: flex;
-  flex-direction: column;
-  margin-top: 35px;
-  border: 4px solid;
-  padding: 1em;
+.tweets {
+  background-color: #f4f1ec;
+  width: 100%;
+  border: 5px solid #545149;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-.tweet:hover {
-  box-shadow: 10px 10px #c9cae2;
-}
-
-.tweet header{
+.tweets header{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0);
-  margin-bottom: 20px;
+  flex-direction: row;
+  height: 80px;
+  color: #545149;
+  width: 100%;
 }
 
-.tweet-profile {
-  display: flex;
-  align-content: center;
-}
-
-.user-name {
-  margin-left: 12px
-}
-
-.profile-img {
+.header-right{
   height: 60px;
-}
-
-.alias  {
-  color: #c5cbe3;
-  font-weight: 600;
-}
-
-.tweet footer {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.avatar{
+  margin-left: 1.5em;
+}
+
+.name {
+  margin-left: 0.5em;
+}
+
+.handle{
+  margin-right: 1.5em;
+  color:rgb(165, 163, 163);
+}
+
+.tweet p {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  height: 100px;
+  border-bottom: 5px solid #545149;
+}
+
+.tweets footer{
+  display: flex;
   justify-content: space-between;
-  align-content: center;
-  border-top: 4px solid;
-  margin-top: 40px;
-  padding-top: 12px;
-  font-size: 14px;
-}
-
-.tweet-icons {
-  display: flex;
-  flex-direction: row; 
-  flex-wrap: nowrap;
-}
-
-.tweet-icons button {
-  border: none;
-  color: #47569c
-}
-
-.tweet-icons button:hover {
-  color: #c7982c
-}
-
-.likes {
-  display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  height: 55px;
+  margin-left: 3em;
+  margin-right: 3em;
+  font-size: 16px;
 }
 
-.like-count {
-  font-size: 8px;
+.error{
+  color: red;
+  font-weight: 300;
+  border: 3px solid red;
+  font-size: 1.5rem;
+  height: 1.5rem 
 }
 
-.red-text {
-  color:red;
+.icons {
+  color: #4056A1
+}
+
+.tweets:hover {
+  box-shadow: 10px 5px 5px grey;
+}
+
+#flag:hover{
+  color:orange
+}
+
+#retweet:hover{
+  color: orange;
+}
+
+#heart:hover{
+  color:orange
 }

@@ -1,38 +1,28 @@
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 120px;
-  width:100%;
-  background-color: #4056A1;
-  color: #FFF;
-  padding: 0 1.5em 0 1.5em;
+  background: #4056A1;
+  color: #FFFFFF;
+  width:100%; 
+  font-family: 'Bungee', cursive;
+  align-items: center;
   position: fixed;
-  top:0px;
 }
 
  nav span {
-  font-family: 'Bungee', sans-serif;
-  font-size: 40px;
+  margin-left: 1.5em;
  }
 
- .nav-right p{
-  margin: 0;
- }
-
- .nav-right button i{
-  color: red;
- }
-
- .nav-right button{
-  all: unset;
-  cursor: pointer;
+ .nav-right {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 4em;
-  width: 100%;
+  align-items: center;
+  margin-right: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
  }
 
- .nav-right button:hover i{
-  color:#FFF;
+ .fa-solid.fa-angles-down{
+  color: red;
  }

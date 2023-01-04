@@ -1,21 +1,18 @@
-$$(document).ready(function() {
-  const maxCount = 140;
-  const $textArea = $("#tweet-text");
+$(document).ready(function() {
+  console.log("ready");
 
-  // the remaining chars available on display 
-  const updateCount = function () {
-    const string = $(this).val();
-    const count = maxCount - string.length;
-    
-    const counter = $(this).next().children().last();
-    counter.text(counter);
+  // 
+  const $input = $("#tweet-text");
+  const $counter = $("#tweet-counter");
 
-    if (count < 0) {
-      $(counter).addClass("red-text");
+  $input.on("input", function (event) {
+    const tweetLength = this.value?.length;
+    const lettersAllowed = 140 - tweetLength;
+    $counter.addClass("negative");
+    if (lettersAllowed < 0) {
+      $counter.addClass("negative");
     } else {
-      $(counter).removeClass("red-text");
+      $counter.removeClass("negative");
     }
-  };
-
-  $textArea.on("input", updateCount);
+  });
 });
