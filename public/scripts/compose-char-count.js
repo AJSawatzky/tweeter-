@@ -1,18 +1,22 @@
-$(document).ready(function() {
-  console.log("ready");
+$(document).ready(function () {
+  const maxCount = 140;
+  const $textArea = $("#tweet-text");
 
-  // 
-  const $input = $("#tweet-text");
-  const $counter = $("#tweet-counter");
+  // count the remaining chars available and display on screen
 
-  $input.on("input", function (event) {
-    const tweetLength = this.value?.length;
-    const lettersAllowed = 140 - tweetLength;
-    $counter.addClass("negative");
-    if (lettersAllowed < 0) {
-      $counter.addClass("negative");
+  const updateCount = function () {
+    const string = $(this).val();
+    const count = maxCount - string.length;
+
+    const counter = $(this).next().children().last();
+    counter.text(count);
+
+    if (count < 0) {
+      $(counter).addClass("red-text");
     } else {
-      $counter.removeClass("negative");
+      $(counter).removeClass("red-text");
     }
-  });
+  };
+
+  $textArea.on("input", updateCount);
 });
