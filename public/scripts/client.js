@@ -15,10 +15,10 @@ const createTweetElement = function (tweet) {
   <article class="tweets">
   <header>
   <div class = header-right>
-  <imgclass ="avatar" src=${tweet.user.avatar} />
-  <h5 class ="name" >${tweet.user.name}</h5>
+  <imgclass ="avatar" src=${escape(tweet.user.avatar)} />
+  <h5 class ="name" >${escape(tweet.user.name)}</h5>
   </div>
-  <h5 class ="handle">${tweet.user.handle}</h5>
+  <h5 class ="handle">${escape(tweet.user.handle)}</h5>
   </header>
   
   <p>${escaped(tweet.content.text)}</p>
@@ -41,24 +41,24 @@ const resetCounter = function () {
 };
 
 const renderTweets = function (tweets) {
-  const $container = $("#tweets-container");
+  const $container = $("#tweet-container");
   $container.empty();
   for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
+    const $tweet = createTweetElement(tweets);
     $container.prepend($tweet);
   }
 };
 
-const loadtweets = function () {
+const loadtweets = async () => {
   $.ajax({
-    url: "tweets",
+    url: "/tweets",
     method: "GET",
     dataType: "json",
     success: function (tweets) {
       renderTweets(tweets);
     },
     error: function (error) {
-      console.log(error);
+      console.error(error);
     },
   });
 };
@@ -66,7 +66,7 @@ const loadtweets = function () {
 const appendError = function (error) {
   $(".new-tweet").prepend(
     $("<span class='error'>")
-    .text('error!')
+    .text("error!")
     .slideDown()
     .delay(4000)
     .hide(600)
@@ -77,7 +77,8 @@ const removeError = () => {
   $('.error')
 }
 
-$(document).ready(function () {
+$(document).ready(async function () {
+  await loadtweets();
   console.log("ready")
   loadtweets();
 

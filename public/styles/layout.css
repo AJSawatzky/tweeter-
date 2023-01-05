@@ -28,8 +28,16 @@ body {
 
  body main {
   background-color: #f4f1ec;
+  width: 80%;
   margin-left:10%;
   margin-right:10%;
   display:flex;
   flex-direction:column;
+ }
+
+ @media (min-width: 3024) {
+  .below-nav {
+    display: flex;
+    flex-direction: row;
+  }
  }

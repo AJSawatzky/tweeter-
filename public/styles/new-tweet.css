@@ -1,5 +1,5 @@
 .new-tweet{
-  margin-top: 40px;
+  padding-top: 8rem;
 }  
 
 section textarea{
@@ -16,12 +16,20 @@ section button {
   border: none;
 }
 
+section button:hover {
+  
+}
+
 section output {
   font-family: 'Bungee', cursive;
   display: flex;
   justify-content: flex-end;
 }
 
-.negative{
+.red-text{
   color: red;
+}
+
+.tweet-hover:hover {
+  box-shadow: 10px 5px 5px grey;
 }

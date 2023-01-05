@@ -43,19 +43,20 @@
       <span>tweeter</span>
       <div class='nav-right'>
         <span><strong>Write</strong> a new tweet</span>
-        <div class="nav-arrow"> a new tweet>
+        <div class="nav-arrow"> <a new tweet>
         <i class="fa-solid fa-angles-down"></i>
         </div>
       </div>
     </nav>
 
+    <!-- Header -->
+  <section class="below-nav">
     <header class="page-header">
       <div>
-        <img scr="/images/profile-hex.png"class="profile">
+        <img class="profile-picture" src="public/images/profile-hex.png"/>
       </div>
-      <br>
     <div>
-        <h2>AJ</h2>
+        <h2> <class="user-name">Your Name</h2>
     </div>
 </header>
 
@@ -66,13 +67,20 @@
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>          
           <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" id="tweet-counter" class="counter" for="tweet-text"> 140</output>
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output 
+            name="counter" 
+            id="tweet-counter" 
+            class="counter" 
+            for="tweet-text"> 
+            140
+          </output>
           </div>
         </form>
       </section>
-      <section> id="tweet-container">        
+      <section> <id="tweet-container">        
     </section>
+  </section>
     </main>
   </body>
 </html>

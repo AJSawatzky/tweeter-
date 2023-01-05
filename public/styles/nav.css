@@ -1,13 +1,14 @@
 nav {
-  display: flex;
-  justify-content: space-between;
+  display:flex ;
   height: 120px;
-  background: #4056A1;
+  width: 100vw; 
   color: #FFFFFF;
-  width:100%; 
-  font-family: 'Bungee', cursive;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 1.5em;
+  font-family: 'Bungee', cursive;
   position: fixed;
+  
 }
 
  nav span {
@@ -19,10 +20,24 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 1.5em;
+  margin-right: 0;
   font-family: 'Source Sans Pro', sans-serif;
  }
 
  .fa-solid.fa-angles-down{
   color: red;
+  animation: float 2.5s ease-in-out infinite;
  }
+
+ @keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
