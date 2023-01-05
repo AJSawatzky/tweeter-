@@ -74,13 +74,14 @@
 }
 
 #flag:hover{
-  color:orange
+  color: rgb(255, 191, 72);
 }
 
 #retweet:hover{
-  color: orange;
+  color: rgb(255, 191, 72);
 }
 
 #heart:hover{
-  color:orange
+  color:rgb(255, 191, 72);
 }
+

@@ -16,6 +16,11 @@ section button {
   border: none;
 }
 
+section button:hover {
+  background-color: rgb(255, 191, 72);
+  color: #545149;
+}
+
 /*
 section button:hover {
    button animation goes here
