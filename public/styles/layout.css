@@ -35,6 +35,8 @@ body {
   flex-direction:column;
  }
 
+
+
  @media (min-width: 3024) {
   .below-nav {
     display: flex;

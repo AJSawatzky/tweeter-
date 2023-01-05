@@ -16,9 +16,11 @@ section button {
   border: none;
 }
 
+/*
 section button:hover {
-  
+   button animation goes here
 }
+*/
 
 section output {
   font-family: 'Bungee', cursive;

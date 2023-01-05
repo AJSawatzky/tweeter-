@@ -15,10 +15,10 @@ const createTweetElement = function (tweet) {
   <article class="tweets">
   <header>
   <div class = header-right>
-  <imgclass ="avatar" src=${escape(tweet.user.avatar)} />
-  <h5 class ="name" >${escape(tweet.user.name)}</h5>
+  <imgclass ="avatar" src=${escaped(tweet.user.avatar)} />
+  <h5 class ="name" >${escaped(tweet.user.name)}</h5>
   </div>
-  <h5 class ="handle">${escape(tweet.user.handle)}</h5>
+  <h5 class ="handle">${escaped(tweet.user.handle)}</h5>
   </header>
   
   <p>${escaped(tweet.content.text)}</p>
@@ -44,7 +44,7 @@ const renderTweets = function (tweets) {
   const $container = $("#tweet-container");
   $container.empty();
   for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweets);
+    const $tweet = createTweetElement(tweet);
     $container.prepend($tweet);
   }
 };
@@ -74,13 +74,12 @@ const appendError = function (error) {
 };
 
 const removeError = () => {
-  $('.error')
+  $('.error').remove();
 }
 
 $(document).ready(async function () {
   await loadtweets();
   console.log("ready")
-  loadtweets();
 
   const $form = $("form");
   $form.on("submit", function (event) {
