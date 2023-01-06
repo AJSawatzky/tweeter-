@@ -9,6 +9,19 @@ const escaped = function (str) {
   return div.innerHTML;
 };
 
+const resetCounter = function () {
+  $(".counter").text(140);
+};
+
+const renderTweets = function (tweets) {
+  const $container = $("#tweet-container");
+  $container.empty();
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $container.prepend($tweet);
+  }
+};
+
 const createTweetElement = function (tweet) {
   const timeDelta = moment(tweet.created_at).fromNow()
   const $tweet = $(`
@@ -36,19 +49,6 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
-const resetCounter = function () {
-  $(".counter").text(140);
-};
-
-const renderTweets = function (tweets) {
-  const $container = $("#tweet-container");
-  $container.empty();
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $container.prepend($tweet);
-  }
-};
-
 const loadtweets = async () => {
   $.ajax({
     url: "/tweets",
@@ -60,13 +60,14 @@ const loadtweets = async () => {
     error: function (error) {
       console.error(error);
     },
+
   });
 };
 
 const appendError = function (error) {
   $(".new-tweet").prepend(
     $("<span class='error'>")
-    .text("error!")
+    .text("whoops!")
     .slideDown()
     .delay(4000)
     .hide(600)
@@ -77,9 +78,9 @@ const removeError = () => {
   $('.error').remove();
 }
 
-$(document).ready(async function () {
-  await loadtweets();
+$(document).ready(function () {
   console.log("ready")
+  loadtweets();
 
   const $form = $("form");
   $form.on("submit", function (event) {

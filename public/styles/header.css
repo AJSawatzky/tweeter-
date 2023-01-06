@@ -10,6 +10,17 @@
   padding-top: 150px;
 }
 
+#profile-picture {
+  display: flex; 
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+  color: #f4f1ec;
+  font-size: 30px;
+  padding: 20px;
+}
+
 @media (min-width: 3024px) {
   .page-header {
     display: flex;
