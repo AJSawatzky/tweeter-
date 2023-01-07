@@ -35,11 +35,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/compose-char-count.js"></script>
-    <script type="text/javascript" src="/scripts/mouseover.js"></script>
-    <script type="text/javascript" src="/scripts/tweet-retrieval.js"></script>
-    <script type="text/javascript" src="/scripts/tweet-submission.js"></script>
-
-
+    
   </head>
 
   <body>
@@ -47,10 +43,10 @@
     <nav>
       <span id="logo">tweeter</span>
       <div class="nav-right">
-        <button class="new-tweet-button">
-        <p><strong>Write</strong> a new tweet</p>
+        <div class="new-tweet-button">
+        <span><strong>Write</strong> a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
-      </button>
+        </div>
         </div>
       </div>
     </nav>
@@ -59,7 +55,7 @@
   <section class="below-nav">
     <header class="page-header">
       <div>
-        <img class="profile-picture" src="public/images/profile-hex.png"/>
+        <img class="profile-picture" src="/images/profile-hex.png" />
       </div>
     <div>
         <h2> <class="user-name">Your Name</h2>
@@ -84,8 +80,7 @@
           </div>
         </form>
       </section>
-      <section id="tweet-container">        
-      </section>
+      <section id="tweet-container"></section>
   </section>
     </main>
   </body>

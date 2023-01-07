@@ -3,25 +3,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 455px;
+  height: 520px;
   width: 100%; 
-  background-color: #b87b00;
+  background: #4056A1;
+  color: #FFFFFF;
   background-image: url("https://www.transparenttextures.com/patterns/dust.png");
-  padding-top: 150px;
+  padding-top: 9rem;
 }
 
-#profile-picture {
-  display: flex; 
+.user-name {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-#logo {
-  font-family: 'Bungee', sans-serif;
-  color: #f4f1ec;
-  font-size: 30px;
-  padding: 20px;
-}
-
-@media (min-width: 3024px) {
+@media (min-width: 1024px) {
   .page-header {
     display: flex;
     margin-top: 15%;
@@ -31,9 +26,10 @@
     padding-top: 0;
   }
 
-  .user-name{
-    margin-top: 5%;
-    margin-bottom: 5%;
+  .profile-picture {
+    margin-top: 5%; 
   }
 }
+
+  
 

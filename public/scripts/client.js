@@ -9,29 +9,16 @@ const escaped = function (str) {
   return div.innerHTML;
 };
 
-const resetCounter = function () {
-  $(".counter").text(140);
-};
-
-const renderTweets = function (tweets) {
-  const $container = $("#tweet-container");
-  $container.empty();
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $container.prepend($tweet);
-  }
-};
-
 const createTweetElement = function (tweet) {
   const timeDelta = moment(tweet.created_at).fromNow()
   const $tweet = $(`
   <article class="tweets">
   <header>
   <div class = header-right>
-  <imgclass ="avatar" src=${escaped(tweet.user.avatar)} />
-  <h5 class ="name" >${escaped(tweet.user.name)}</h5>
+  <img class ="avatar" src=${tweet.user.avatar} />
+  <h5 class ="name" >${tweet.user.name}</h5>
   </div>
-  <h5 class ="handle">${escaped(tweet.user.handle)}</h5>
+  <h5 class ="handle">${tweet.user.handle}</h5>
   </header>
   
   <p>${escaped(tweet.content.text)}</p>
@@ -49,9 +36,23 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
-const loadtweets = async () => {
+const resetCounter = function () {
+  $(".counter").text(140);
+};
+
+const renderTweets = function (tweets) {
+  const $container = $("#tweet-container");
+  $container.empty();
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $container.prepend($tweet);
+  }
+};
+
+
+const loadtweets = function () {
   $.ajax({
-    url: "/tweets",
+    url: "tweets",
     method: "GET",
     dataType: "json",
     success: function (tweets) {
@@ -67,7 +68,7 @@ const loadtweets = async () => {
 const appendError = function (error) {
   $(".new-tweet").prepend(
     $("<span class='error'>")
-    .text("whoops!")
+    .text(error)
     .slideDown()
     .delay(4000)
     .hide(600)
@@ -88,9 +89,9 @@ $(document).ready(function () {
     removeError();
     const serializedData = $(this).serialize();
     if ($("#tweet-text").val() === "" || null) {
-      appendError("Enter some text.");
+      appendError("Enter some text!");
     } else if ($("#tweet-text").val().length > 140) {
-      appendError("Tweet must be 140 characters or less.");
+      appendError("Tweet must be 140 characters or less!");
     } else {
       $.post("/tweets", serializedData).then((response) => {
         loadtweets();

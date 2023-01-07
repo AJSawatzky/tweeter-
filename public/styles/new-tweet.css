@@ -17,15 +17,8 @@ section button {
 }
 
 section button:hover {
-  background-color: rgb(255, 191, 72);
-  color: #545149;
+  box-shadow: 10px 5px 5px grey;
 }
-
-/*
-section button:hover {
-   button animation goes here
-}
-*/
 
 section output {
   font-family: 'Bungee', cursive;
@@ -33,10 +26,12 @@ section output {
   justify-content: flex-end;
 }
 
+section label {
+  font-family: 'Bungee', cursive;
+  font-size: 20px;
+}
+
 .red-text{
   color: red;
 }
 
-.tweet-hover:hover {
-  box-shadow: 10px 5px 5px grey;
-}

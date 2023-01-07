@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.avatar{
+img.avatar {
   margin-left: 1.5em;
 }
 
@@ -31,7 +31,7 @@
   margin-left: 0.5em;
 }
 
-.handle{
+.handle {
   margin-right: 1.5em;
   color:rgb(165, 163, 163);
 }

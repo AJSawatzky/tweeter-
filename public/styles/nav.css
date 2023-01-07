@@ -1,12 +1,17 @@
 nav {
   display: flex;
-  height: 120px;
-  width: 100%; 
   justify-content: space-between;
+  height: 120px;
+  background: #4056A1;
+  color: #FFFFFF;
+  width: 100%; 
+  font-family:'Bungee', cursive;
   align-items: center;
-  padding: 0 1.5em;
-  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
-  background-color: #b87b00;
+  position: fixed;
+}
+
+nav span {
+  margin-left: 1.5em;
 }
 
  .nav-right {
@@ -14,27 +19,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 0;
+  margin-right: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
   color: #f4f1ec;
  }
 
- nav .nav-right button{
-  all: unset;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.2em;
-  width: 100%;
-}
-
- nav .nav-right button p{
-  margin: 0;
-}
-
-
- nav .nav-right button i{
+ nav .nav-right i{
   color: red;
   animation: float 3s ease-in-out infinite;
   display: flex;
@@ -46,7 +36,7 @@ nav {
 		transform: translatey(0px);
 	}
 	50% {
-		transform: translatey(20px);
+		transform: translatey(15px);
 	}
 	100% {
 		transform: translatey(0px);
