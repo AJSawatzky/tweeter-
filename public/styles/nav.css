@@ -29,6 +29,7 @@ nav span {
   animation: float 3s ease-in-out infinite;
   display: flex;
   justify-content: center;
+  margin-left: 1.5em;
 }
 
  @keyframes float {

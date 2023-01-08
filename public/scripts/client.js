@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 const escaped = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -15,7 +16,7 @@ const createTweetElement = function (tweet) {
   <article class="tweets">
   <header>
   <div class = header-right>
-  <img class ="avatar" src=${tweet.user.avatar} />
+  <img src=${tweet.user.avatars} class="profile-img" />
   <h5 class ="name" >${tweet.user.name}</h5>
   </div>
   <h5 class ="handle">${tweet.user.handle}</h5>
