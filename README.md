@@ -12,11 +12,14 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-##Final Result
+## Final Result
 
-/tweeter-/public/docs/tweetr.png
 
-/tweeter-/public/docs/tweet.gif
+<img width="1470" alt="Screen Shot 2023-01-08 at 1 41 39 AM" src="https://user-images.githubusercontent.com/108662685/211190862-e0efd40c-8443-4068-bf3e-be1e3ec12284.png">
+
+
+https://user-images.githubusercontent.com/108662685/211191018-b46e5f90-d2d8-43a5-95c3-595423852654.mov
+
 
 
 ## Dependencies
