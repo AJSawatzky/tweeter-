@@ -1,3 +1,6 @@
+/*
+header and username
+*/
 .page-header {
   display: flex;
   justify-content: center;
@@ -15,6 +18,10 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+/*
+responsive desktop view of header
+*/
 
 @media (min-width: 1024px) {
   .page-header {

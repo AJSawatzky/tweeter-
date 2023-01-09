@@ -1,37 +1,51 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  height: 120px;
-  background: #4056A1;
-  color: #FFFFFF;
-  width: 100%; 
-  font-family:'Bungee', cursive;
-  align-items: center;
-  position: fixed;
+/*
+nav bar and logo
+*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    background: #4056A1;
+    color: #FFFFFF;
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    width: 100%; 
+    font-family:'Bungee', cursive;
+    align-items: center;
+    position: sticky;
 }
 
-nav span {
-  margin-left: 1.5em;
+  nav span {
+    margin-left: 1.5em;
 }
+
+/*
+"Write a tweet"
+*/
 
  .nav-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1.5em;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #f4f1ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #f4f1ec;
  }
 
- nav .nav-right i{
-  color: red;
-  animation: float 3s ease-in-out infinite;
-  display: flex;
-  justify-content: center;
-  margin-left: 1.5em;
+/*
+red arrows
+*/
+  nav .nav-right i{
+    color: red;
+    animation: float 3s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    margin-left: 1.5em;
 }
 
+/*
+bobbing arrows animation
+*/
  @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -44,6 +58,17 @@ nav span {
 	}
  }
 
+/*
+responsive desktop view of nav
+*/
+ @media (min-width: 1024px) {
+  nav{
+    color: #FFFFFF;
+    background-color: #4056A1;
+    background-image: none;
+    position: fixed;
+ }
+}
 
 
 
